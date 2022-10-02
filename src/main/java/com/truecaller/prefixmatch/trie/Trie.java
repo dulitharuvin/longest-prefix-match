@@ -33,4 +33,8 @@ public class Trie {
         }
         return current.isEndOfWord() ? prefixToBuild.toString() : null;
     }
+
+    public boolean isEmpty() {
+        return root.getChildren().isEmpty();
+    }
 }
