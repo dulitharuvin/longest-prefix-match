@@ -18,7 +18,7 @@ public class FileResourcesUtils {
             BufferedReader reader = new BufferedReader(streamReader);
             String line;
             while ((line = reader.readLine()) != null) {
-                listOfPrefixes.add(line.trim().toLowerCase());
+                listOfPrefixes.add(line.trim());
             }
         } catch (IOException e) {
             e.printStackTrace();
