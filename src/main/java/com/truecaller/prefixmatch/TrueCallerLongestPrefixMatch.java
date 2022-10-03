@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class TrueCallerLongestPrefixMatch {
 
     public static void main(String[] args) {
-        String fileName = "sample_prefixes.txt";
+        String fileName = "sample_prefixess.txt";
         FileResourcesUtils fileResourcesUtil = new FileResourcesUtils();
         List<String> prefixList = fileResourcesUtil.getPrefixList(fileName);
 
