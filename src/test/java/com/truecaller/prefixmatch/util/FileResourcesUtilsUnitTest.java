@@ -32,8 +32,8 @@ public class FileResourcesUtilsUnitTest {
 
     @Test
     public void readsATextFile_AndReturnsAnEmptyArrayListWhenTextFileIsEmpty() {
-        String emptyfileName = "sample_prefixes_empty_file_test.txt";
-        assertTrue(fileResourcesUtil.getPrefixList(emptyfileName).isEmpty());
+        String emptyFileName = "sample_prefixes_empty_file_test.txt";
+        assertTrue(fileResourcesUtil.getPrefixList(emptyFileName).isEmpty());
     }
 
     @Test
@@ -43,7 +43,7 @@ public class FileResourcesUtilsUnitTest {
     }
 
     @Test
-    public void trysToReadATextFile_AndReturnsAnEmptyArrayListWhileHandlingTheException(){
+    public void tryToReadATextFile_AndReturnsAnEmptyArrayListWhileHandlingTheException(){
         String nonExistFileName = "non_existent_file_test.txt";
         ArrayList<String> emptyArrayList = new ArrayList<>();
         assertEquals(emptyArrayList, fileResourcesUtil.getPrefixList(nonExistFileName));
@@ -52,5 +52,6 @@ public class FileResourcesUtilsUnitTest {
     @AfterAll
     public static void tearDown() {
         fileResourcesUtil = null;
+        preLoadedList = null;
     }
 }
