@@ -11,9 +11,10 @@ public class FileResourcesUtils {
 
     public ArrayList<String> getPrefixList(String fileName) {
 
-        InputStream fileInputStream = this.getFileFromResourceAsStream(fileName);
         ArrayList<String> listOfPrefixes = new ArrayList<>();
         try {
+            InputStream fileInputStream = this.getFileFromResourceAsStream(fileName);
+
             InputStreamReader streamReader = new InputStreamReader(fileInputStream, StandardCharsets.UTF_8);
             BufferedReader reader = new BufferedReader(streamReader);
             String line;
@@ -21,6 +22,8 @@ public class FileResourcesUtils {
                 listOfPrefixes.add(line.trim());
             }
         } catch (IOException e) {
+            e.printStackTrace();
+        }catch (IllegalArgumentException e){
             e.printStackTrace();
         }
         return listOfPrefixes;
