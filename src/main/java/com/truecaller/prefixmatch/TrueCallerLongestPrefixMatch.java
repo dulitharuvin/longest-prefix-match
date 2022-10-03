@@ -9,11 +9,18 @@ import java.util.Scanner;
 public class TrueCallerLongestPrefixMatch {
 
     public static void main(String[] args) {
-        String fileName = "sample_prefixess.txt";
+        String fileName = "sample_prefixes.txt";
         FileResourcesUtils fileResourcesUtil = new FileResourcesUtils();
         List<String> prefixList = fileResourcesUtil.getPrefixList(fileName);
 
         Trie trie = new Trie();
+
+        if(prefixList.isEmpty()){
+            System.out.println("==========================================================");
+            System.out.println("|| Prefix list is empty, Existing the program.... :( !! ||");
+            System.out.println("==========================================================");
+            return;
+        }
 
         prefixList.forEach(el -> {
             trie.insert(el);
