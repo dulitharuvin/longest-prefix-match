@@ -16,7 +16,7 @@ public class Trie {
         current.setEndOfWord(true);
     }
 
-    public String containsPrefix(String prefix) {
+    public String containsLongestMatchingPrefix(String prefix) {
         TrieNode current = root;
         StringBuilder prefixToBuild = new StringBuilder();
 

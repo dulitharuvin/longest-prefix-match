@@ -23,7 +23,7 @@ public class TrueCallerLongestPrefixMatch {
         System.out.print("Enter a search term : ");
         String searchTerm = input.nextLine();
 
-        String longestPrefix = trie.containsPrefix(searchTerm.trim());
+        String longestPrefix = trie.containsLongestMatchingPrefix(searchTerm.trim());
         if (longestPrefix != null)
             System.out.println("Longest matching prefix : " + longestPrefix);
         else
